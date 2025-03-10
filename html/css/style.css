@@ -2136,7 +2136,7 @@ margin: 0
 .popular-services.sec-padding {
   padding: 112px 0 85px 0; }
   .popular-services.sec-padding-gb {
-    padding: 85px 0;
+    padding: 85px 0px;
   background-color: red; }
 .popular-services .tour-list-box {
   margin-bottom: 35px; }
@@ -3859,21 +3859,61 @@ margin: 0
    About styles
    ---------------------------- */
 .about-info {
-  text-align: center; }
+  text-align: center;
+font-size: 18px; }
   .about-info .sec-title .tagline {
     color: #222222;
     font-weight: bold;
-    font-size: 14px; }
+    font-size: 18px; }
   .about-info1 .about-info-content p {
     font-size: 16px;
     line-height: 26px; }
 
+
+.about-btn {
+  font-size: 10px;
+}
+
   .about-info1 {
+    /* display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr; */
     text-align: center;
     padding: 40px 0;
     font-size: 16px;
     /* color: white; */
-    background: url('../images/bellgold/business-people-clapping-hands-together.jpg') no-repeat fixed center;
+    /* background: url('../images/bellgold/business-people-clapping-hands-together.jpg') no-repeat fixed center; */
+    background-color: #e6e5e5;
+  }
+
+  .values {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    padding: 0 20px;
+  }
+ 
+  .values img {
+    border-radius: 20px;
+  }
+
+  .core-values {
+    display: flex;
+  }
+
+  .mission {
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 1000px; */
+    padding-top: 80px;
+  }
+
+  .mission-left {
+    width: 50%;
+  }
+
+  .mission-right {
+    width: 50%;
   }
 
   .about-info2 {
@@ -3881,8 +3921,34 @@ margin: 0
     line-height: 3;
     font-size: 16px;
     padding: 40px 0;
+    width: 90%;
+    margin: auto;
     /* color: white; */
     /* background: url('../images/bellgold/business-people-clapping-hands-together.jpg') no-repeat fixed center; */
+  }
+
+  .about-info2 ul {
+    margin-top: 20px;
+  }
+
+  .about-info2 li {
+    border: 0.1px solid #e2e0e0;
+    border-radius: 8px;
+    margin: 3px;
+    cursor: pointer;
+  }
+
+  .about-info2 li:hover {
+    background-color: #ece9e9;
+  }
+
+  .core-values1 span:hover {
+    color: teal;
+    font-weight: 700;
+  }
+
+  .mission-left p, .mission-right p {
+    height: 100px;
   }
 
 .about-full {
