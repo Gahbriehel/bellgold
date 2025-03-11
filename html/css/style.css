@@ -1045,7 +1045,16 @@ ul, li {
 
 .row-collapse {
   padding: 0 !important;
-  margin: 0 !important; }
+  margin: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-collapse > li {
+  flex: 1 0 25%; /* 4 items per row */
+  max-width: 25%;
+}
+
   .row-collapse [class*='col-'] {
     padding: 0 !important;
     margin: 0 !important; }
@@ -1277,11 +1286,11 @@ button[type="submit"] {
   min-height: 100px;
 max-height: 300px;
   overflow: hidden;
-  
 
 }
   .img-box img {
-    width: 100%; }
+    width: 100%; 
+  }
 
 .sidebar-box {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); }
@@ -2644,7 +2653,8 @@ margin: 0
 .gallery-member.gallery-masonry .img-box img {
   width: 100%; }
 .gallery-member.gallery-masonry .grid .grid-item {
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+ }
 
 .latest-news.even div[class*='col-']:nth-child(even) .single-latest-news {
   position: relative;
