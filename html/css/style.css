@@ -1166,11 +1166,6 @@ ul, li {
   font-size: 18px;
 }
 
-.our-approach, .why-us {
-  /* width: 50%; */
-  /* background-color: red; */
-}
-
 /* Base styles */
 .hero2 {
   text-align: center;
@@ -1303,6 +1298,28 @@ ul, li {
 @media (max-width: 768px) {
   .hero h1, .hero1 h1, .hero2 h1, .accordion-container h2 {
     font-size: 2em;
+  }
+
+  .service-section p{
+    width: 90%;
+  }
+
+  .service-section h2 {
+    font-size: 24px;
+  }
+
+  .hero1 p {
+    width: 90%;
+  }
+
+  .talent-sourcing-container {
+    padding: 10px 20px;
+  }
+
+  .talent-sourcing-container p {
+    font-size: 16px;
+    width: 90%;
+    /* float: right; */
   }
 
   .destinations h2 {
