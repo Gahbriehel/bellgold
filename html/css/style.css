@@ -1079,8 +1079,8 @@ ul, li {
   text-align: center;
   background: white;
   background: #eef2f3;
-  /* width: 1024px; */
-  /* margin: 0 auto; */
+  /* max-width: 1600px;
+  margin: 0 auto; */
 }
 
 .traveling-advantages h2 {
@@ -1140,31 +1140,77 @@ ul, li {
 }
 
 #talent-sourcing {
-  background-color: #ebebeb;
+  /* background-color: #ebebeb; */
 }
 
 .talent-sourcing-container {
-  /* display: flex;
-  text-align: center;
-  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 20px 20px 20px 80px;
+  /* background-color: #fdfdfd; */
+}
+
+.our-approach,
+.why-us {
+  background-color: #f8f5f5;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
 .talent-sourcing-container h3 {
   color: #f4b843;
-  padding: 20px 0;
-  text-decoration: underline;
+  font-size: 28px;
+  margin-bottom: 20px;
   text-align: center;
+  border-bottom: 2px solid #f4b843;
+  padding-bottom: 10px;
 }
 
 .talent-sourcing-container h4 {
   font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .talent-sourcing-container p {
-  font-size: 18px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
 }
+
+.approach,
+.why {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .talent-sourcing-container {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+
+  .our-approach,
+  .why-us {
+    padding: 20px;
+  }
+
+  .talent-sourcing-container h3 {
+    font-size: 24px;
+  }
+
+  .talent-sourcing-container h4 {
+    font-size: 18px;
+  }
+
+  .talent-sourcing-container p {
+    font-size: 15px;
+  }
+}
+
 
 /* Base styles */
 .hero2 {
@@ -1312,15 +1358,8 @@ ul, li {
     width: 90%;
   }
 
-  .talent-sourcing-container {
-    padding: 10px 20px;
-  }
 
-  .talent-sourcing-container p {
-    font-size: 16px;
-    width: 90%;
-    /* float: right; */
-  }
+
 
   .destinations h2 {
     font-size: 1.8em;
@@ -1328,11 +1367,6 @@ ul, li {
 
   .advantages-grid {
     grid-template-columns: 1fr;
-  }
-
-  .talent-sourcing-container {
-    flex-direction: column;
-    justify-content: center;
   }
 
   .our-approach, .why-us {
