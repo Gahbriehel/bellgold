@@ -1139,9 +1139,97 @@ ul, li {
   margin: 10px auto;
 }
 
-#talent-sourcing {
-  /* background-color: #ebebeb; */
+.service-section {
+  background-color: #eef2f3;
 }
+
+.study-relocate-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background: linear-gradient(135deg, #eef2f3 0%, #ffffff 100%); */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Dropdown side */
+.study-destination-selector {
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 1.5rem;
+  border-right: 1px solid #dcdcdc;
+}
+
+.study-destination-selector label {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.study-destination-selector select {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #2d3748;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: border 0.3s ease;
+}
+
+.study-destination-selector select:focus {
+  outline: none;
+  border-color: #3182ce;
+}
+
+/* Description side */
+.destination-description {
+  flex: 2 1 600px;
+}
+
+.destination-description h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f4b843;
+  margin-bottom: 1rem;
+}
+
+.destination-description p {
+  font-size: 18px;
+  color: #4a5568;
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .study-relocate-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1rem; /* reduced top/bottom padding */
+  }
+
+  .study-destination-selector {
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .study-destination-selector label {
+    /* margin-bottom: 0.5rem; */
+  }
+}
+
+
 
 .talent-sourcing-container {
   display: grid;
@@ -3141,6 +3229,7 @@ margin: 0
   /* background-color: #f3f4f7; */
   padding: 10px;
 }
+
 
 @media (max-width: 768px) {
   .destinations-grid {

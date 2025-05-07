@@ -118,53 +118,28 @@
          <img src="images/bellgold/portrait-male-student-with-books.jpg" width="700px" style="border-radius: 8px;"
             alt="">
       </div>
-      <div class="destinations-grid">
-         <div class="grid1">
-            <h4>Study and Relocate to United Kingdom</h4>
-            <p>The UK boasts a rich academic history, home to world-renowned universities like Oxford, 
-               Imperial and Cambridge. Its high-quality education system, coupled with shorter course 
-               durations compared to other countries, makes it an attractive option. The UK's multicultural 
-               environment provides a vibrant and diverse experience. Furthermore, the "Graduate Route" 
-               visa allows graduates to stay and work, enhancing career prospects.</p>
+      <div class="study-relocate-wrapper">
+         <div class="study-destination-selector">
+           <label for="destinationSelect"><strong>Study and Relocate to:</strong></label>
+           <select id="destinationSelect">
+             <option value="uk">United Kingdom</option>
+             <option value="canada">Canada</option>
+             <option value="usa">USA</option>
+             <option value="australia">Australia</option>
+             <option value="ireland">Ireland</option>
+             <option value="newzealand">New Zealand</option>
+           </select>
          </div>
-         <div class="grid1">
-            <h4>Study and Relocate to Canada</h4>
-            <p>Canada offers a safe and welcoming environment with a high quality of life. Its universities 
-               are known for their strong academic programs and research opportunities. Canada's 
-               bilingualism (English and French) provides a unique cultural experience. The country's 
-               immigration policies offer pathways for graduates to stay and work, making it a popular 
-               choice for long-term prospects.</p>
+       
+         <div class="destination-description">
+           <h4 id="destinationTitle">Study and Relocate to United Kingdom</h4>
+           <p id="destinationText">
+             Home to top universities like Oxford and Cambridge, the UK offers high-quality education and shorter course durations.
+             Its multicultural society and Graduate Route visa enhance both the study experience and career prospects.
+           </p>
          </div>
-         <div class="grid1">
-            <h4>Study and Relocate to USA</h4>
-            <p>The USA is home to a vast array of prestigious universities, offering diverse academic 
-               programs. Its cutting-edge research facilities and innovative learning environments attract 
-               students from around the globe. The USA's diverse culture and vibrant campus life provide a 
-               unique and enriching experience. The vast size of the U.S. means a student can find just about 
-               any type of environment they wish to study in.</p>
-         </div>
-         <div class="grid1">
-            <h4>Study and Relocate to Australia</h4>
-            <p>Australia offers a high quality of education and a relaxed, outdoor lifestyle. Its universities are 
-               known for their strong research and innovation. Australia's multicultural society and 
-               welcoming atmosphere make it easy for international students to adapt. The post study work 
-               visa is also very attractive to many international students.</p>
-         </div>
-         <div class="grid1">
-            <h4>Study and Relocate to Ireland</h4>
-            <p>Ireland provides a high-quality education within a friendly and welcoming environment. Its
-               English-speaking environment and rich cultural heritage make it an appealing destination.
-               Ireland has become a hub for global companies, offering excellent career opportunities for 
-               graduates. It also has a very high standard of living.</p>
-         </div>
-         <div class="grid1">
-            <h4>Study and Relocate to New Zealand</h4>
-            <p>New Zealand is known for its stunning natural beauty, safe environment, and high quality of 
-               life. Its universities offer strong academic programs and a focus on research. The welcoming 
-               and inclusive culture makes it easy for international students to integrate. Like Australia, New 
-               Zealand offers post study work opportunities.</p>
-         </div>
-      </div>
+       </div>
+       
       <div class="traveling-advantages">
          <h2>Advantages and Opportunities of international education</h2>
          <div class="advantages-grid">
@@ -465,6 +440,41 @@
 
    <!-- theme custom js  -->
    <script src="js/main.js"></script>
+<script>
+   const destinationData = {
+      uk: {
+        title: "Study and Relocate to United Kingdom",
+        text: "Home to top universities like Oxford and Cambridge, the UK offers high-quality education and shorter course durations. Its multicultural society and Graduate Route visa enhance both the study experience and career prospects."
+      },
+      canada: {
+        title: "Study and Relocate to Canada",
+        text: "Canada offers quality education, research opportunities, and a safe, welcoming environment. Bilingualism and graduate immigration pathways make it ideal for long-term settlement."
+      },
+      usa: {
+        title: "Study and Relocate to USA",
+        text: "With prestigious universities and cutting-edge research, the USA attracts global talent. Its diverse culture and range of academic programs create a rich student experience."
+      },
+      australia: {
+        title: "Study and Relocate to Australia",
+        text: "Australia combines strong academics with a relaxed lifestyle and inclusive culture. The post-study work visa adds to its appeal for international students."
+      },
+      ireland: {
+        title: "Study and Relocate to Ireland",
+        text: "Ireland offers high-quality education in an English-speaking, culturally rich environment. It's a tech hub with excellent graduate career opportunities."
+      },
+      newzealand: {
+        title: "Study and Relocate to New Zealand",
+        text: "New Zealand offers strong academics, a safe and scenic environment, and a welcoming culture. Post-study work rights make it attractive for international students."
+      }
+    };
+  
+    document.getElementById("destinationSelect").addEventListener("change", function () {
+      const value = this.value;
+      const { title, text } = destinationData[value];
+      document.getElementById("destinationTitle").textContent = title;
+      document.getElementById("destinationText").textContent = text;
+    });
+   </script>
 </body>
 
 
