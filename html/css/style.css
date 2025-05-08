@@ -1392,16 +1392,24 @@ li {
 
 
 .study-relocate-wrapper {
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 0 20px;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .study-relocate-wrapper p {
   font-size: 18px;
+}
+
+.slideshow-container {
+  width: 1240px;
+  /* border: 1px solid #f4b843; */
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 6px 4px #f3daa7;
 }
 
 .slide-nav button {
